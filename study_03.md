@@ -83,5 +83,27 @@ def solution(s, n):
 
 - **chr()** : 정수인 유니코드를 넣으면 그 코드에 해당하는 문자열 리턴
 - **ord()** : chr()의 반대. 문자열을 넣으면 그에 맞는 유니코드(정수)를 리턴
-
 다시 보완한 코드
+
+```python
+def solution(s, n):
+    answer = ''
+    B = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z".split()
+    b = [i.lower() for i in B] # B의 소문자 리스트
+    for i in s:
+        # 공백은 그냥 추가
+        if i == ' ':
+            answer += i
+        else:
+            # i가 소문자일 때
+            if i.islower():
+                y = b.index(i)
+                answer += b[(y+n)%26]
+            # i가 대문자일 때
+            elif i.isupper():
+                x = B.index(i)
+                answer += B[(x+n)%26]     
+    return answer
+```
+
+
