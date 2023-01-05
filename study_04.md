@@ -102,8 +102,6 @@ def solution(n, lost, reserve):
 **6. 인형이 삭제된 카운트를 리턴**
 
 ```python
-# 크레인 인형뽑기 게임
-```
 def solution(board, moves):
     emp = []
     cnt = 0
@@ -124,6 +122,6 @@ def solution(board, moves):
                 break
     return cnt
 ```
-```
+
 
 ![image](https://user-images.githubusercontent.com/106129152/210744625-596dc104-5135-43ec-8d10-4efaacd34bfd.png)
