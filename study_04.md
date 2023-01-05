@@ -69,7 +69,7 @@ def solution(n, lost, reserve):
 
 **01/05**
 
-[크레인 인형 뽑기 게임](https://school.programmers.co.kr/learn/courses/30/lessons/64061)
+**[크레인 인형 뽑기 게임](https://school.programmers.co.kr/learn/courses/30/lessons/64061)**
 
 처음 풀어보는 카카오의 코딩 문제였는데, 
 
