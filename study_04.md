@@ -101,4 +101,29 @@ def solution(n, lost, reserve):
 
 **6. 인형이 삭제된 카운트를 리턴**
 
+```python
+# 크레인 인형뽑기 게임
+```
+def solution(board, moves):
+    emp = []
+    cnt = 0
+    
+    for move in moves: # 1, 5, 3, 5, 1, 2, 1, 4 (열)    
+        for i in range(len(board)): # len(board) = 5행: 0, 1, 2, 3, 4
+            if board[i][move-1] != 0:
+                emp.append(board[i][move-1])
+                # 인형을 집은 자리는 빈칸으로 만들어줘야 하므로 0
+                board[i][move-1] = 0         
+                
+                # 바구니에 2개 이상 쌓였을 때 
+                if len(emp) >= 2:
+                    # [-1]과 [-2]가 같으면 [-2:]만큼 한번에 삭제 후 2개 카운트
+                    if emp[-1] == emp[-2]:
+                        del emp[-2:]
+                        cnt += 2
+                break
+    return cnt
+```
+```
+
 ![image](https://user-images.githubusercontent.com/106129152/210744625-596dc104-5135-43ec-8d10-4efaacd34bfd.png)
